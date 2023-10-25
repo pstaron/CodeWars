@@ -1,0 +1,38 @@
+function duplicateEncode(word){
+  let obj = {}
+     word = word.toLowerCase()
+     word = word.split('');
+    for (i=0; i<word.length; i++){
+      if(obj[word[i]]){
+        obj[word[i]]++;
+      }else{
+        obj[word[i]] =1;
+      }
+    }
+  word = word.map((L)=>{
+    if(obj[L] && obj[L]>1){
+      return ')';
+    }else{
+      return '(';
+    }
+  });
+  return word.join('')
+}
+
+
+TEST
+
+
+
+const chai = require("chai");
+const assert = chai.assert;
+chai.config.truncateThreshold=0;
+
+describe("Duplicate Encoder", () => {
+  it("Testing for fixed tests", () => {
+    assert.strictEqual(duplicateEncode("din"),"(((");
+    assert.strictEqual(duplicateEncode("recede"),"()()()");
+    assert.strictEqual(duplicateEncode("Success"),")())())","should ignore case");
+    assert.strictEqual(duplicateEncode("(( @"),"))((");
+  });
+});
