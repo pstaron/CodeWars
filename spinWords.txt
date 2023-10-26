@@ -1,0 +1,17 @@
+function spinWords(string){
+
+
+    string=string.split(" ")
+    let a=""
+    let empty = []
+    for(a of string){
+        if(a.length >= 5){
+            a = a.split("")
+            a = a.reverse()
+            a = a.join("")
+        }
+        empty=empty.concat(a)
+
+    }
+    return empty.join(" ")
+}
