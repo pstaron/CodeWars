@@ -1,0 +1,38 @@
+
+function Innafunkcja(n) {
+        if (n < 2) {
+            return n;
+        }
+        return Innafunkcja(n - 1) + Innafunkcja(n - 2);
+}
+
+
+function productFib(n){
+    let b = 0;
+    let c = 0;
+    let i =0;
+    while (b*c<n){
+        c=b;
+        b=Innafunkcja(i);
+        i++;
+    }
+   
+    return [c,b, b*c === n]
+}
+
+
+TEST
+
+const { assert } = require('chai');
+
+describe("Tests", () => {
+  it("test", () => {
+    assert.sameOrderedMembers(productFib(4895), [55, 89, true])
+    assert.sameOrderedMembers(productFib(5895), [89, 144, false])
+    assert.sameOrderedMembers(productFib(74049690), [6765, 10946, true])
+    assert.sameOrderedMembers(productFib(84049690), [10946, 17711, false])
+    assert.sameOrderedMembers(productFib(193864606), [10946, 17711, true])
+    assert.sameOrderedMembers(productFib(447577), [610, 987, false])
+    assert.sameOrderedMembers(productFib(602070), [610, 987, true])
+  });
+});
