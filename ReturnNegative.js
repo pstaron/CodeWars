@@ -1,4 +1,5 @@
 function makeNegative(num) {
+    let a =0
     return num-(num*2)
 }
 
