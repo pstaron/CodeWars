@@ -1,0 +1,15 @@
+function getCount(str) {
+  let vowels  = ["a","e","i","o","u"]
+ let words = str.split("")
+  let a = words.filter((word) => vowels.includes(word))
+
+  return a.length;
+}
+TEST
+const {assert} = require("chai");
+
+describe("Vowels Count Tests",function(){
+  it("should return 5 for 'abracadabra'",function(){
+    assert.strictEqual(getCount("abracadabra"), 5) ;
+  });
+});

@@ -1,0 +1,26 @@
+function XO(str) {
+  let o  = ["o","O"]
+  let X = ["x","X"]
+   let words = str.split("")
+    let a = words.filter((word) => o.includes(word))
+    let b = words.filter((word) => X.includes(word))
+
+  if(a.length === b.length){
+      return true
+  }else{
+      return false
+  }
+}
+
+TEST 
+const Test = require('@codewars/test-compat');
+
+describe("Tests", () => {
+  it("test", () => {
+Test.assertEquals(XO('xo'),true);
+Test.assertEquals(XO("xxOo"),true);
+Test.assertEquals(XO("xxxm"),false);
+Test.assertEquals(XO("Oo"),false);
+Test.assertEquals(XO("ooom"),false);
+  });
+});
