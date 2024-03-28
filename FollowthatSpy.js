@@ -17,6 +17,7 @@ function findRoutes(routes) {
     },[x[0][0]]).join(", ")
 }
 
+
 console.log(findRoutes([["Chicago", "Winnipeg"], ["Halifax", "Montreal"], ["Montreal", "Toronto"], ["Toronto", "Chicago"], ["Winnipeg", "Seattle"]]))
 // The splice() method of Array instances changes the contents of an array by removing or replacing existing elements and/or adding new elements in place
 //The shift() method of Array instances removes the first element from an array and returns that removed element. This method changes the length of the array.
