@@ -1,14 +1,17 @@
 function buildFun(n){
 
-    var res = []
-
+    let res = []
     for (let i = 0; i< n; i++){
-        res.push(()=>i)
+        a(i)
+    }
+    function a (iem){
+        res.push(()=>iem)
     }
     return res
 }
+for (let i = 0; i< 10; i++)
+    buildFun(10)[i]
 
-console.log(buildFun(10)[i])
 //
 // describe("Tests", () => {
 //     it("test", () => {
