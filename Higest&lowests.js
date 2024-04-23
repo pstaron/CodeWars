@@ -1,12 +1,10 @@
 function highAndLow(numbers){
 
-    const num = numbers.split(" ").sort();
+    const num = numbers.split(" ").sort()
     const max = Math.max(...num)
     const min = Math.min(...num)
     let string = [max, min]
-    let result = string.toString().replace(",", " ")
-
-    return(result)
+    return(string.toString().replace(",", " "))
 }
 console.log(highAndLow("8 3 -5 42 -1 0 0 -9 4 7 4 -4"))
 
