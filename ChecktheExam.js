@@ -4,7 +4,6 @@ function checkExam(array1, array2) {
       const data = (array1[i]==="" || array2[i]===""?table+=0:(array1[i]===array2[i]? table +=4:table-=1))
   }
     return table < 0 ? 0 : table;
-
 }
 
 console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
