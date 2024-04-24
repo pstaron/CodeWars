@@ -1,16 +1,10 @@
 function checkExam(array1, array2) {
     let table = 0;
   for(let i=0; i<array1.length; i++){
-     if(array1[i] === array2[i]){
-         table += 4
-     }else if(array1[i]==="" || array2[i]===""){
-         table += 0
-     }else{
-         table = table-1
-     }
+      const data = (array1[i]==="" || array2[i]===""?table+=0:(array1[i]===array2[i]? table +=4:table-=1))
   }
+    return table < 0 ? 0 : table;
 
-    return table
 }
 
 console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
