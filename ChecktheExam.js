@@ -3,6 +3,8 @@ function checkExam(array1, array2) {
   for(let i=0; i<array1.length; i++){
      if(array1[i] === array2[i]){
          table += 4
+     }else if(array1[i]==="" || array2[i]===""){
+         table += 0
      }else{
          table = table-1
      }
@@ -11,7 +13,7 @@ function checkExam(array1, array2) {
     return table
 }
 
-console.log(checkExam(["a", "a", "b", "b"], ["a", "c", "b", "d"]));
+console.log(checkExam(["a", "a", "c", "b"], ["a", "a", "b",  ""]));
 
 // const chai = require("chai");
 // const assert = chai.assert;
