@@ -7,6 +7,7 @@ const maxSubArray = (nums) => {
     // iterate through the nums, store sub-problems result
     for(let i = 0; i < nums.length; i++){
 
+
         //cumulating answers to the top
         //compare currentSum add current number
         //with current number and store the maximum value
